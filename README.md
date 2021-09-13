@@ -1,3 +1,7 @@
+[![Build Status](https://app.travis-ci.com/ErikSSWE/jsramverk-BE.svg?branch=main)](https://app.travis-ci.com/ErikSSWE/jsramverk-BE)
+
+!!! This is the backendpart only if you would want the backend also check out jsramverk-FE
+
 # jsramverk2
 
 1. Run npm install 
