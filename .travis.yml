@@ -14,7 +14,7 @@ git:
     submodules: false
 
 env: 
-    NODE_ENV = 'test';
+   - NODE_ENV = 'test';
 
 before_script:
     - npm install
