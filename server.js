@@ -22,10 +22,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.sendFile(path + "index.html")
+    res.sendFile(path + "index.html");
 });
 
 const db = require("./app/models");
+
 //db.sequelize.sync();
 db.mongoose
   .connect(db.url, {
