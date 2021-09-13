@@ -5,12 +5,16 @@ node_js:
     - "10"
     - "8"
     - "6"
+
 services: mongodb
 
 sudo: false
 
 git:
     submodules: false
+
+env: 
+    NODE_ENV = 'test';
 
 before_script:
     - npm install
