@@ -14,7 +14,7 @@ describe('Reports', () => {
             chai.request(server)
                 .get("/#/texts")
                 .end((err, res) => {
-                    console.log("res:", res);
+                    //console.log("res:", res);
                     res.should.have.status(200);
                     res.body.should.be.an("object");
                     //res.body.data.should.be.an("array");
