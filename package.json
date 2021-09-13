@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text --reporter=clover mocha 'test/**/*.js' --timeout 10000",
     "start": "node server.js",
-    "posttest": "npm run eslint"
+    "posttest": "npm run eslint",
+    "clean": "rm -rf node_modules package-lock.json"
   },
   "author": "Erik",
   "license": "ISC",
