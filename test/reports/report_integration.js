@@ -9,27 +9,36 @@ chai.should();
 chai.use(chaiHttp);
 
 describe('Reports', () => {
-    describe('GET /#/texts', () => {
-        it('It should return status: 200', (done) => {
+    describe('POST /textEditors', () => {
+        it('should get 201 adding doc', (done) => {
+            let doc = {
+                title: "Test_add",
+                text: "<p>testing!</p>"
+            };
+
             chai.request(server)
-                .get("/#/texts")
+                .post("/api/textEditors")
+                .send(doc)
                 .end((err, res) => {
-                    //console.log("res:", res);
                     res.should.have.status(200);
                     res.body.should.be.an("object");
+                    res.body.should.have.property("id");
+                    res.body.should.have.property("createdAt");
 
                     done();
                 });
         });
     });
 
-    describe('GET /#/add', () => {
-        it('It should return status 200', (done) => {
+    describe('GET /#/texts', () => {
+        it('It should return status: 200', (done) => {
             chai.request(server)
-                .get("/#/add")
+                .get("/api/textEditors")
                 .end((err, res) => {
+                    console.log("res:", res);
                     res.should.have.status(200);
-                    res.body.should.be.an("object");
+                    res.body.should.be.an("array");
+                    res.body.should.have.lengthOf.at.least(1);
 
                     done();
                 });

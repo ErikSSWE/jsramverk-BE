@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha 'test/**/*.js' --timeout 10000 --exit",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text --reporter=clover mocha 'test/**/*.js' --timeout 10000 --exit",
     "start": "node server.js",
+    "start-local": "NODE_ENV=test node server.js",
     "clean": "rm -rf node_modules package-lock.json"
   },
   "author": "Erik",
