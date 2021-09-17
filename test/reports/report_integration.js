@@ -22,19 +22,17 @@ describe('Reports', () => {
                 });
         });
     });
-    /*
-    describe('GET /reports/kmom02', () => {
-        it('200 HAPPY PATH', (done) => {
+
+    describe('GET /#/add', () => {
+        it('It should return status 200', (done) => {
             chai.request(server)
-                .get("/reports/kmom02")
+                .get("/#/add")
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.body.should.be.an("object");
-                    res.body.data.should.be.an("array");
-                    res.body.data.length.should.be.above(0);
 
                     done();
                 });
         });
-    });*/
+    });
 });
