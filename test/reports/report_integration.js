@@ -35,7 +35,7 @@ describe('Reports', () => {
             chai.request(server)
                 .get("/api/textEditors")
                 .end((err, res) => {
-                    console.log("res:", res);
+                    //console.log("res:", res);
                     res.should.have.status(200);
                     res.body.should.be.an("array");
                     res.body.should.have.lengthOf.at.least(1);
